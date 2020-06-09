@@ -10,6 +10,10 @@ const userSchema = new Schema(
       required: [true, 'Username is required.'],
       unique: true
     },
+    profilePicture: {
+      type: String,
+      default: "images/default.png"
+    },
     email: {
       type: String,
       required: [true, 'Email is required.'],

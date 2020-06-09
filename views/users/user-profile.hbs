@@ -1,6 +1,12 @@
 {{#if user}}
     <h2>Welcome, {{ user.username }}!</h2>
+    <img src="{{ user.profilePicture }}" alt="">
     <p>This is your profile page my friend! And your email is: {{ user.email }}</p>
+    <p>Upload your profile picture:</p>
+    <form action="/user-profile/upload-picture" method="POST">
+        <input type="file" name="profilePicture"/>
+        <button>Upload</button>
+    </form>
 {{else}}
     <p>Still no logged in user, sorry!</p>
 {{/if}}
